@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/YBSlider.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<section class="visual-slide">
+			<h1 class="title">YBSlider</h1>
+			<div class="slider">
+				<ul class="list">
+					<li>
+						<div>
+							<a href="#" style="background-image:url('img/slide-bg-1.png')">1</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#" style="background-image:url('img/slide-bg-2.png')">2</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#" style="background-image:url('img/slide-bg-3.png')">3</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#" style="background-image:url('img/slide-bg-4.png')">4</a>
+						</div>
+					</li>
+				</ul>
+				<div class="yb-controls">
+					<div class="yb-page"></div>
+				</div>
+				<div class="yb-prevnext">
+					<button type="button" class="yb-prev">이전</button>
+					<button type="button" class="yb-next">다음</button>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+
+		$('.slider').YBSlider({
+			page : 0,
+			speed : 500,
+			loop : false,
+			pagination : true,
+			init: function(instance) {
+				console.log('init: ', this, instance)
+			},
+			edge: function(instance, direction) {
+				console.log('edge: ', this, instance, direction)
+			},
+			beforeChange: function(instance, currentSlide, nextSlide) {
+				console.log('beforeChange: ', this, instance, currentSlide, nextSlide)
+			},
+			afterChange: function(instance, currentSlide) {
+				console.log('afterChange: ', this, instance, currentSlide)
+			},
+			setPosition: function(instance) {
+				console.log('setPosition: ', this, instance)
+			}
+		});
+
+	})
+	</script>
+
+</body>
+</html>

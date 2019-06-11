@@ -1,0 +1,85 @@
+.wrapper {
+	width: 200px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.title {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.slider {
+	position: relative;
+	overflow: hidden;
+}
+
+.list {
+	height: 300px;
+}
+
+.list li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.list li a {
+	display: block;
+	line-height: 300px;
+	font-size: 100px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	background-size: 800px 300px;
+}
+
+.yb-btn-page {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	display: flex;
+}
+
+.yb-btn-page .paging {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.yb-prevnext button {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	z-index: 10;
+}
+
+.yb-prevnext .yb-prev {
+	left: 0;
+}
+
+.yb-prevnext .yb-next {
+	right: 0;
+}
+
+.yb-page {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.yb-page .yb-page-btn {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.yb-page .yb-active {
+	background-color: red;
+	color: #fff;
+}
