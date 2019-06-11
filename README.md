@@ -1,0 +1,1 @@
+https://dkwlfkwl.github.io/jquery.YBSlider.js/
